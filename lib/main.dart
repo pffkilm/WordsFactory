@@ -13,7 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'WordsFactory',
-      home: MyScreen(),
+      home: const MyScreen(),
+      theme:
+      ThemeData(
+        primaryColor: const Color.fromRGBO(255, 255, 255, 1) ,
+      ),
       debugShowCheckedModeBanner: false,
     );
   }

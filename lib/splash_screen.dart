@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project/intro1.dart';
+import 'package:project/all_intro.dart';
+
 
 class MyScreen extends StatefulWidget {
   const MyScreen({super.key});
@@ -15,7 +16,7 @@ class _MyScreenState extends State<MyScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const Intro1()),
+        MaterialPageRoute(builder: (context) => const AllIntroPages()),
       );
     });
   }
@@ -23,7 +24,7 @@ class _MyScreenState extends State<MyScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(255, 255, 255, 1), // Белый фон
+      backgroundColor: const Color.fromRGBO(255, 255, 255, 1),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -35,18 +36,18 @@ class _MyScreenState extends State<MyScreen> {
             Container(
               width: 375,
               height: 46,
-              child: Opacity(
+              child: const Opacity(
                 opacity: 1.0,
                 child: Text(
                   'WordsFactory',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: 'Rubik',
+                     // fontFamily: 'Rubik',
                     fontWeight: FontWeight.w900,
                     fontSize: 40,
                     height: 1.15,
                     letterSpacing: -1,
-                    color: const Color(0xFF3C3A36),
+                    color: Color(0xFF3C3A36),
                   ),
                 ),
               ),
